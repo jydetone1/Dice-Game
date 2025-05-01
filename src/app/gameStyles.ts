@@ -33,7 +33,7 @@ export const StyledDigitWrapper = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  background: '#bababa',
+  background: 'var(--bg-color)',
   marginBottom: theme.spacing(3),
 }));
 
@@ -78,13 +78,13 @@ export const StyledButtonWrapper = styled(Button)(() => ({
 }));
 
 export const StyledGridColumn = styled(Grid)(({ theme }) => ({
-  borderBottom: '1px solid #999999',
+  borderBottom: '1px solid var(--border-color)',
   paddingTop: theme.spacing(1),
   paddingBottom: theme.spacing(1),
 }));
 
 export const StyledGridRow = styled(Grid)(({ theme }) => ({
-  borderBottom: '1px solid #999999;',
+  borderBottom: '1px solid var(--border-color)',
   paddingTop: theme.spacing(1),
   paddingBottom: theme.spacing(1),
   alignItems: 'center',

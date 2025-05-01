@@ -1,6 +1,6 @@
 export const text = {
   youWon: 'You won',
-  youLost: 'You lost The result was',
+  youLost: 'You lost the result was',
   lower: 'lower',
   higher: 'higher',
   play: 'PLAY',

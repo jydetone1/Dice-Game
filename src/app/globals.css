@@ -1,6 +1,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --border-color: #999999;
+  --bg-color: #bababa;
 }
 
 html,
