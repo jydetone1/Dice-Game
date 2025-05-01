@@ -78,21 +78,24 @@ export const StyledButtonWrapper = styled(Button)(() => ({
 }));
 
 export const StyledGridColumn = styled(Grid)(({ theme }) => ({
-  borderBottom: '1px solid #eee',
+  borderBottom: '1px solid #999999',
   paddingTop: theme.spacing(1),
   paddingBottom: theme.spacing(1),
 }));
 
 export const StyledGridRow = styled(Grid)(({ theme }) => ({
-  borderBottom: '1px solid #eee',
+  borderBottom: '1px solid #999999;',
   paddingTop: theme.spacing(1),
   paddingBottom: theme.spacing(1),
   alignItems: 'center',
 }));
 
 export const StyledEmptyText = styled(Typography)(() => ({
-  fontSize: '3rem',
+  fontSize: '1rem',
   fontWeight: 300,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 }));
 
 export const StyledResultText = styled(Typography, {

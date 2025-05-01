@@ -1,9 +1,9 @@
 export const text = {
   youWon: 'You won',
-  youLost: 'You lost The result was ',
+  youLost: 'You lost The result was',
   lower: 'lower',
   higher: 'higher',
-  play: '  PLAY',
+  play: 'PLAY',
   time: 'Time',
   guess: 'Guess',
   result: 'Result',
