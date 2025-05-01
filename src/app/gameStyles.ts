@@ -11,6 +11,7 @@ import { styled } from '@mui/material/styles';
 interface IStyledResultText extends TypographyProps {
   $success?: boolean;
 }
+
 export const StyledMainContainer = styled(Container)(({ theme }) => ({
   marginTop: theme.spacing(5),
 }));
@@ -28,12 +29,13 @@ export const StyledDigitContainer = styled(Box)(({ theme }) => ({
 }));
 
 export const StyledDigitWrapper = styled(Box)(({ theme }) => ({
-  height: '200px',
-  width: '320px',
+  height: 200,
+  width: 320,
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  background: 'var(--bg-color)',
+  backgroundColor: theme.palette.grey[100],
+  borderRadius: theme.shape.borderRadius,
   marginBottom: theme.spacing(3),
 }));
 
@@ -49,15 +51,15 @@ export const StyledToastWrapper = styled(Box)(({ theme }) => ({
   top: theme.spacing(1.25),
   left: '50%',
   transform: 'translateX(-50%)',
-  zIndex: 1300,
-  minWidth: '320px',
+  zIndex: theme.zIndex.snackbar,
+  minWidth: 320,
   paddingLeft: theme.spacing(2),
   paddingRight: theme.spacing(2),
 }));
 
-export const StyledDiceDigit = styled(Typography)(() => ({
+export const StyledDiceDigit = styled(Typography)(({ theme }) => ({
   fontSize: '3rem',
-  fontWeight: 300,
+  fontWeight: theme.typography.fontWeightLight,
 }));
 
 export const StyledSliderRangeWrapper = styled(Box)(({ theme }) => ({
@@ -78,21 +80,21 @@ export const StyledButtonWrapper = styled(Button)(() => ({
 }));
 
 export const StyledGridColumn = styled(Grid)(({ theme }) => ({
-  borderBottom: '1px solid var(--border-color)',
+  borderBottom: `1px solid ${theme.palette.divider}`,
   paddingTop: theme.spacing(1),
   paddingBottom: theme.spacing(1),
 }));
 
 export const StyledGridRow = styled(Grid)(({ theme }) => ({
-  borderBottom: '1px solid var(--border-color)',
+  borderBottom: `1px solid ${theme.palette.divider}`,
   paddingTop: theme.spacing(1),
   paddingBottom: theme.spacing(1),
   alignItems: 'center',
 }));
 
-export const StyledEmptyText = styled(Typography)(() => ({
+export const StyledEmptyText = styled(Typography)(({ theme }) => ({
   fontSize: '1rem',
-  fontWeight: 300,
+  fontWeight: theme.typography.fontWeightLight,
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -100,7 +102,7 @@ export const StyledEmptyText = styled(Typography)(() => ({
 
 export const StyledResultText = styled(Typography, {
   shouldForwardProp: (prop) => prop !== '$success',
-})<IStyledResultText>(({ $success }) => ({
-  color: $success ? 'green' : 'red',
-  fontWeight: 'bold',
+})<IStyledResultText>(({ $success, theme }) => ({
+  color: $success ? theme.palette.success.main : theme.palette.error.main,
+  fontWeight: theme.typography.fontWeightBold,
 }));
