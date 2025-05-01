@@ -4,11 +4,11 @@ import { FC, memo } from 'react';
 import { StyledButtonWrapper } from '../../gameStyles';
 import { text } from '../../utils/text';
 
-interface IGameButton {
+interface IPlayButton {
   onPlay: () => void;
 }
 
-const PlayButton: FC<IGameButton> = ({ onPlay }) => {
+const PlayButton: FC<IPlayButton> = ({ onPlay }) => {
   return (
     <StyledButtonWrapper
       variant='contained'
